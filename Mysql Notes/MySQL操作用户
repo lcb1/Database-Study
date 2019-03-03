@@ -1,0 +1,13 @@
+创建删除用户：使用create user和drop user
+create user username;
+create user username@host;
+
+drop user username;
+drop user username@host;
+注：username和host可以是字符串也可以不是字符串。create user和drop 要对应使用
+创建用户使用grant
+grant privileges on database.table to username@host identified by 'password';
+创建删除用户使用mysql.user表
+insert into mysql.user(username,host,authentication_string,privileges_priv,...) values('username','host',password('password'),N,..);
+update  mysql.user set... where....
+delete from mysql.user where .....
