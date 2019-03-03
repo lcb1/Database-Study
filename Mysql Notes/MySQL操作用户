@@ -4,10 +4,14 @@ create user username@host;
 
 drop user username;
 drop user username@host;
-注：username和host可以是字符串也可以不是字符串。create user和drop 要对应使用
+注：username和host可以是字符串也可以不是字符串。create user和drop 要对应使用，%一定要加‘‘；
 创建用户使用grant
 grant privileges on database.table to username@host identified by 'password';
-创建删除用户使用mysql.user表
+
+
+======================================
+////****创建删除用户使用mysql.user表
+-----------------不要使用mysql.user表较高版本可能出现ERROR 1364 (HY000): Field 'ssl_cipher' doesn't have a default value错误！
 insert into mysql.user(username,host,authentication_string,privileges_priv,...) values('username','host',password('password'),N,..);
 update  mysql.user set... where....
 delete from mysql.user where .....
