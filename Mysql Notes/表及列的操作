@@ -1,0 +1,18 @@
+
+1.修改表名
+rename table oldname to newname;
+alter table oldname rename (to) newname;
+
+
+
+
+2.字段操作
+--增加列
+alter table tablename add columnname type (constraint (after clumnname/first));
+
+--删除列
+alter table tablename drop columnname;
+
+--修改列名和约束
+alter table tablename change oldname newname newconstraint;
+alter table tablename modify tablename newconstraint;
