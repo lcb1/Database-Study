@@ -15,3 +15,14 @@ grant privileges on database.table to username@host identified by 'password';
 insert into mysql.user(username,host,authentication_string,privileges_priv,...) values('username','host',password('password'),N,..);
 update  mysql.user set... where....
 delete from mysql.user where .....
+
+
+------------授权
+grant privileges on database.table to username@host [with grant option];
+revoke privileges on database.table to username@host;
+revoke grant option on database.table to username@host;
+
+-----修改密码
+set password=password('password');
+set password for user@host =password('password');
+mysql -uuser -p password Newpassword
