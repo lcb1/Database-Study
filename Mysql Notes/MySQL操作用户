@@ -26,3 +26,8 @@ revoke grant option on database.table to username@host;
 set password=password('password');
 set password for user@host =password('password');
 mysql -uuser -p password Newpassword
+
+
+--------------新版本的mysql使用了caching_sha2_password加密件与旧版本不兼容
+会导致用旧加密插件进行的连接失败
+alter user username@‘host’ identified with mysql_native_password by ‘password’；
