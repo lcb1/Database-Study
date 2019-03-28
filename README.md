@@ -1,2 +1,2 @@
-# Mysql-study
-Mysql 数据库学习
+# DataBase-Study
+Database 数据库学习
