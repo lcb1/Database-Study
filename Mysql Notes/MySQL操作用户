@@ -31,3 +31,22 @@ mysql -uuser -p password Newpassword
 --------------新版本的mysql使用了caching_sha2_password加密件与旧版本不兼容
 会导致用旧加密插件进行的连接失败
 alter user username@‘host’ identified with mysql_native_password by ‘password’；
+
+
+show grants for username@host 
+
+
+--------------修改用户密码强度
+show variables like 'validate_password%';  ------模糊查找相关变量
+-------------与密码强度相关的变量
+validate_password.policy            ------密码强度级别  0 low 1 medium 3 strong
+validate_password.mixed_case_count  ------密码包含大小写字母的个数
+validate_password.number_count      ------密码包含数字的个数
+validate_password.special_char_count -----密码包含特殊自符的个数
+validate_password.length            ------密码长度
+-----------查看与密码相关变量的值 value
+select @@variable;
+
+
+
+
