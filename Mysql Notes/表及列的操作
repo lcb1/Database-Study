@@ -30,3 +30,17 @@ drop index index_name on table;
 普通索引
 全文索引
 多列索引
+
+
+---------mysql事务
+start transaction; 开启事务
+commit;           提交事务
+rollback;         回滚事务
+select @@autocommit;  查看mysql是否支持自动提交 1 自动提交 0 非自动提交
+set @@autocommit=value; value=1 value =0
+select @@transaction_isolation; 查看mysql默认隔离级别
+read uncommitted;               可读未提交
+read committed;                 只可读已提交
+repeatable read;                双方都提交可读到事务变化
+serializable;                   可串行化
+set global transaction isolation level xxxxx; 设置全局的事务隔离级别
