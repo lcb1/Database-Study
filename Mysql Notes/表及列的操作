@@ -16,3 +16,17 @@ alter table tablename drop columnname;
 --修改列名和约束
 alter table tablename change oldname newname newconstraint;//改变字段的约束和列名
 alter table tablename modify tablename newconstraint;      //只改变约束
+
+---------------注意 非空 not null 不是索引
+索引类型 ：
+主键索引  
+alter table table_name add primary key index_name (cloumn_name);
+alter table table_name drop primary key;//主键只有一个不能通过index_name删除
+唯一索引
+alter table table_name add unique index_name (cloumn_name);
+create unique index index_name on table_name(cloumn_name);
+alter table table_name drop index index_name;
+drop index index_name on table(cloumn_name);
+普通索引
+全文索引
+多列索引
