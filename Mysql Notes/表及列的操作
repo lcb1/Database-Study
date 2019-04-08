@@ -26,7 +26,7 @@ alter table table_name drop primary key;//主键只有一个不能通过index_na
 alter table table_name add unique index_name (cloumn_name);
 create unique index index_name on table_name(cloumn_name);
 alter table table_name drop index index_name;
-drop index index_name on table(cloumn_name);
+drop index index_name on table;
 普通索引
 全文索引
 多列索引
