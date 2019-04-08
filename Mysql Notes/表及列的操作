@@ -14,5 +14,5 @@ alter table tablename add columnname type (constraint (after clumnname/first));
 alter table tablename drop columnname;
 
 --修改列名和约束
-alter table tablename change oldname newname newconstraint;
-alter table tablename modify tablename newconstraint;
+alter table tablename change oldname newname newconstraint;//改变字段的约束和列名
+alter table tablename modify tablename newconstraint;      //只改变约束
