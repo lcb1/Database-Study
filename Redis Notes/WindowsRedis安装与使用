@@ -1,0 +1,10 @@
+Redis windows 下载网址 ：https://github.com/MicrosoftArchive/redis/releases
+
+Redis windows下的引导安装包：Redis-x64-3.2.100.msi
+
+redis安装文件夹下的文件
+redis.wondows.conf    redis在windows下的配置文件
+redis-cli             redis客户端
+redis-server          redis服务端    
+
+redis 默认端口 6379
